@@ -1,0 +1,4 @@
+name: FPC
+version: '${project.version}'
+main: nr.FPC
+api-version: '1.20'
