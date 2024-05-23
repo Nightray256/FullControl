@@ -11,3 +11,5 @@ commands:
     usage: /rtp
   lockchest:
     usage: /lockchest
+  tpa:
+    usage: /tpa
