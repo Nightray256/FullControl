@@ -25,21 +25,21 @@ public class RTPCommand implements CommandExecutor {
         int maxTries = 100;
         int tries = 0;
 
-        do {
+        while (tries < maxTries) {
             x = random.nextInt(10000) - 5000;
             z = random.nextInt(10000) - 5000;
             y = player.getWorld().getHighestBlockYAt(x, z);
 
-            Block block = player.getWorld().getBlockAt(x, y, z);
+            Block block = player.getWorld().getBlockAt(x, y - 1, z);
             Material material = block.getType();
 
-            if (material == Material.AIR || material == Material.WATER || material == Material.LAVA) {
+            if (material != Material.AIR && material != Material.WATER && material != Material.LAVA) {
                 player.teleport(block.getLocation().add(0.5, 1, 0.5));
                 player.sendMessage(ChatColor.GREEN + "傳送成功！" + ChatColor.GRAY + " (x: " + x + ", y: " + y + ", z: " + z + ")");
                 return true;
             }
             tries++;
-        } while (y == 0 && tries < maxTries);
+        }
 
         player.sendMessage(ChatColor.RED + "傳送失敗！請再試一次。");
 

@@ -22,19 +22,13 @@ public class LockChest extends JavaPlugin implements Listener {
 
     private Map<Block, UUID> lockedChests = new HashMap<>();
 
-    @Override
-    public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(this, this);
-    }
-
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         Block clickedBlock = event.getClickedBlock();
 
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK && clickedBlock !=null){
-            if (clickedBlock.getType() == Material.CHEST || clickedBlock.getType() == Material.TRAPPED_CHEST
-                    || clickedBlock.getType() == Material.OAK_DOOR || clickedBlock.getType() == Material.IRON_DOOR){
+            if (clickedBlock.getType() == Material.CHEST || clickedBlock.getType() == Material.TRAPPED_CHEST){
                 UUID playerUUID = player.getUniqueId();
                 lockedChests.put(clickedBlock, playerUUID);
                 Block signBlock = clickedBlock.getLocation().add(0, 1, 0).getBlock();
