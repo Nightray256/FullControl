@@ -18,3 +18,8 @@ You can use this command to avoid yourself to be fought by other peaple in the s
 __Command:/pvp__
 
 __Default:Close__
+
+## RTP Command
+
+This command can make you teleport to random location
+
