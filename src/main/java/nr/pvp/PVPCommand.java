@@ -8,10 +8,15 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class PVPCommand implements CommandExecutor {
 
-    private ArrayList<Player> pvpPlayers = new ArrayList<>();
+    private final Set<Player> pvpPlayers;
+
+    public PVPCommand(Set<Player> pvpPlayers) {
+        this.pvpPlayers = pvpPlayers;
+    }
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {

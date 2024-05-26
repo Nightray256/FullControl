@@ -1,6 +1,5 @@
 package nr.lockchest.listener;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
