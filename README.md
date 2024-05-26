@@ -1,3 +1,6 @@
 # Full Command Controller
 
-A controller for make your server become more convinient
+## PVP Command
+
+You can use this command to avoid yourself to be fought by other peaple in the server.
+__Command:/pvp__
