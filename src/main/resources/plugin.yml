@@ -21,3 +21,7 @@ commands:
     usage: /tpahere <player>
   tpacancel:
     usage: /tpacancel
+  miner:
+    usage: /miner
+  minelog:
+    usage: /minelog
