@@ -12,4 +12,12 @@ commands:
   lockchest:
     usage: /lockchest
   tpa:
-    usage: /tpa
+    usage: /tpa <player>
+  tpaccept:
+    usage: /tpaccept
+  tpdeny:
+    usage: /tpdeny
+  tpahere:
+    usage: /tpahere <player>
+  tpacancel:
+    usage: /tpacancel
